@@ -1,0 +1,20 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "dictionaryDefinitions": [
+    {
+      "name": "whitelist",
+      "path": "./cspell-whitelist.txt",
+      "addWords": true
+    }
+  ],
+  "dictionaries": ["whitelist"],
+  "ignorePaths": [
+    "node_modules",
+    ".turbo",
+    "cspell*",
+    "pnpm-lock.yaml",
+    "*.tsbuildinfo",
+    "SPECS.md"
+  ]
+}

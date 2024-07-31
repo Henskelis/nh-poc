@@ -11,6 +11,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.8.3",
+    "cspell": "^8.13.0",
     "turbo": "^2.0.10",
     "typescript": "catalog:"
   },
