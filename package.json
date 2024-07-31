@@ -7,7 +7,8 @@
     "preinstall": "npx only-allow pnpm",
     "ts-check": "turbo run ts-check",
     "format": "biome check --write --linter-enabled=false --no-errors-on-unmatched",
-    "lint": "biome lint --fix --no-errors-on-unmatched"
+    "lint": "biome lint --fix --no-errors-on-unmatched",
+    "spell-check": "cspell --unique **"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.8.3",
