@@ -1,5 +1,6 @@
 biomejs
 henskelis
+lefthook
 nodenext
 preinstall
 tsbuildinfo
