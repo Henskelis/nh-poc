@@ -12,13 +12,7 @@
     "typescript": "catalog:"
   },
   "author": "Henskelis",
-  "keywords": [
-    "form",
-    "integration",
-    "web",
-    "component",
-    "web component"
-  ],
+  "keywords": ["form", "integration", "web", "component", "web component"],
   "license": "ISC",
   "packageManager": "pnpm@9.6.0",
   "engines": {

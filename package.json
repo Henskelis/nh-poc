@@ -5,9 +5,12 @@
   "type": "module",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "ts-check": "turbo run ts-check"
+    "ts-check": "turbo run ts-check",
+    "format": "biome check --write --linter-enabled=false --no-errors-on-unmatched",
+    "lint": "biome lint --fix --no-errors-on-unmatched"
   },
   "devDependencies": {
+    "@biomejs/biome": "^1.8.3",
     "turbo": "^2.0.10",
     "typescript": "catalog:"
   },
