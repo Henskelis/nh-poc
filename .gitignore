@@ -1,0 +1,16 @@
+# Logs
+logs
+*.log
+.pnpm-debug.log*
+
+# Dependencies
+node_modules
+
+# Compiled binary addons
+build/Release
+
+# Builds
+dist
+
+# Others
+SPECS.md
