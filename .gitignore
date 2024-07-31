@@ -15,5 +15,8 @@ dist
 # TypeScript cache
 *.tsbuildinfo
 
+# Turborepo
+.turbo
+
 # Others
 SPECS.md

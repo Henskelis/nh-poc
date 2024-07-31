@@ -4,9 +4,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "preinstall": "npx only-allow pnpm"
+    "preinstall": "npx only-allow pnpm",
+    "ts-check": "turbo run ts-check"
   },
   "devDependencies": {
+    "turbo": "^2.0.10",
     "typescript": "catalog:"
   },
   "license": "ISC",
