@@ -1,0 +1,21 @@
+{
+  "name": "@henskelis/animations",
+  "version": "0.0.0",
+  "description": "Collection of animations ready to be used with the Web Animations API",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm"
+  },
+  "author": "Henskelis",
+  "keywords": [
+    "animations",
+    "web",
+    "web animations api"
+  ],
+  "license": "ISC",
+  "packageManager": "pnpm@9.6.0",
+  "engines": {
+    "node": ">=20"
+  }
+}

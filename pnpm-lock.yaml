@@ -1,0 +1,17 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .: {}
+
+  docs: {}
+
+  libs/utils: {}
+
+  packages/animations: {}
+
+  packages/hc-forms: {}

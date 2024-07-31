@@ -1,11 +1,13 @@
 {
-  "name": "nh-poc",
+  "name": "@henskelis/utils",
   "version": "0.0.0",
+  "description": "Shared utilities",
   "private": true,
   "type": "module",
   "scripts": {
     "preinstall": "npx only-allow pnpm"
   },
+  "author": "Henskelis",
   "license": "ISC",
   "packageManager": "pnpm@9.6.0",
   "engines": {
