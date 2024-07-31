@@ -2,10 +2,14 @@
   "name": "@henskelis/animations",
   "version": "0.0.0",
   "description": "Collection of animations ready to be used with the Web Animations API",
-  "private": true,
   "type": "module",
   "scripts": {
-    "preinstall": "npx only-allow pnpm"
+    "preinstall": "npx only-allow pnpm",
+    "ts-check": "tsc --emitDeclarationOnly false --noEmit"
+  },
+  "devDependencies": {
+    "tslib": "catalog:",
+    "typescript": "catalog:"
   },
   "author": "Henskelis",
   "keywords": [

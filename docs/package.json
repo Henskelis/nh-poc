@@ -5,7 +5,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "preinstall": "npx only-allow pnpm"
+    "preinstall": "npx only-allow pnpm",
+    "ts-check": "tsc"
+  },
+  "devDependencies": {
+    "tslib": "catalog:",
+    "typescript": "catalog:"
   },
   "author": "Henskelis",
   "license": "ISC",

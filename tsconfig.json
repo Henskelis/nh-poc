@@ -1,0 +1,17 @@
+{
+  "references": [
+    {
+      "path": "./docs/tsconfig.json"
+    },
+    {
+      "path": "./libs/utils/tsconfig.json"
+    },
+    {
+      "path": "./packages/animations/tsconfig.json"
+    },
+    {
+      "path": "./packages/hc-forms/tsconfig.json"
+    }
+  ],
+  "files": []
+}

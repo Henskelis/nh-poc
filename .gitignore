@@ -12,5 +12,8 @@ build/Release
 # Builds
 dist
 
+# TypeScript cache
+*.tsbuildinfo
+
 # Others
 SPECS.md
