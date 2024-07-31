@@ -1,5 +1,5 @@
 {
-  "name": "@henskelis/hc-forms",
+  "name": "@henskelis/test-hc-forms",
   "version": "0.0.0",
   "description": "Easy integration of HC forms in a web page",
   "type": "module",
