@@ -1,10 +1,10 @@
-name: Code Quality
+name: Build
 
 on:
   workflow_call:      
 
 jobs:
-  code-quality:
+  build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -21,9 +21,5 @@ jobs:
           cache: pnpm
       - name: Install dependencies
         run: pnpm install
-      - name: Check for TypeScript errors
-        run: pnpm ts-check
-      - name: Check for formatting and linting errors
-        run: pnpm biome ci .
-      - name: Check for spelling errors
-        run: pnpm spell-check
+      - name: Build packages
+        run: pnpm build

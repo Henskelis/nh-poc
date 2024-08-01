@@ -5,9 +5,8 @@ on:
 
 jobs:
   release:
-    # Prevent the action from running on forks
+    # Prevent the job from running on forks
     if: github.repository == 'Henskelis/nh-poc'
-    name: Release
     permissions:
       contents: write
       pull-requests: write

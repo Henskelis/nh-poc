@@ -1,4 +1,4 @@
-name: Deployment
+name: CD
 
 on:
   push:
@@ -6,12 +6,8 @@ on:
       - main
 
 jobs:
-  code-quality:
-    name: "[CD] Code Quality"
-    uses: ./.github/workflows/code-quality.yaml
   release:
-    needs: code-quality
-    name: "[CD] Release"
+    name: "[CD] Release packages"
     permissions:
       contents: write
       pull-requests: write

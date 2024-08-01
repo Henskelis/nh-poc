@@ -1,4 +1,4 @@
-name: Integration
+name: CI
 
 on:
   push:
@@ -6,9 +6,13 @@ on:
       - next
   pull_request:
     branches:
+      - main
       - next
 
 jobs:
   code-quality:
     name: "[CI] Code Quality"
     uses: ./.github/workflows/code-quality.yaml
+  build:
+    name: "[CI] Build packages"
+    uses: ./.github/workflows/build.yaml
