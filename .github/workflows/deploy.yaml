@@ -1,0 +1,14 @@
+name: Deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  code-quality:
+    name: "[CD] Code Quality"
+    uses: ./.github/workflows/code-quality.yaml
+  release:
+    name: "[CD] Release"
+    uses: ./.github/workflows/release.yaml
