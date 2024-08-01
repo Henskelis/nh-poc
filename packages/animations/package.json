@@ -21,6 +21,10 @@
     ".": {
       "default": "./dist/index.js",
       "types": "./dist/index.d.ts"
+    },
+    "./easing-functions": {
+      "default": "./dist/easing-functions.js",
+      "types": "./dist/easing-functions.d.ts"
     }
   },
   "files": ["dist"],
