@@ -1,5 +1,5 @@
 {
-  "name": "@henskelis/test-animations",
+  "name": "@henskelis/exports-package",
   "version": "0.0.0",
   "description": "Collection of animations ready to be used with the Web Animations API",
   "type": "module",
