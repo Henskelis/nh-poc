@@ -10,5 +10,5 @@ on:
 
 jobs:
   code-quality:
-    name: Code Quality
+    name: "[CI] Code Quality"
     uses: ./.github/workflows/code-quality.yaml
