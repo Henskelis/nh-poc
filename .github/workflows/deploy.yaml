@@ -11,4 +11,7 @@ jobs:
     uses: ./.github/workflows/code-quality.yaml
   release:
     name: "[CD] Release"
+    permissions:
+      contents: write
+      pull-requests: write
     uses: ./.github/workflows/release.yaml
