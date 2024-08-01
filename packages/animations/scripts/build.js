@@ -7,7 +7,7 @@ import pkg from "../package.json" with { type: "json" };
 const program = new Command()
   .description(`Build script for ${pkg.name} - ${pkg.description}`)
   .version(pkg.version)
-  .option("-w, --watch", "enable development mode", false)
+  .option("-w, --watch", "enable watch mode", false)
   .parse(process.argv);
 
 const { watch } = program.opts();
