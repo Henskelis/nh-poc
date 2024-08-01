@@ -3,16 +3,14 @@ name: Release
 on:
   workflow_call:
 
-permissions: {}
-
 jobs:
   release:
     # Prevent the action from running on forks
     if: github.repository == 'Henskelis/nh-poc'
+    name: Release
     permissions:
       contents: write
       pull-requests: write
-    name: Release
     runs-on: ubuntu-latest
     strategy:
       matrix:
