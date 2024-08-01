@@ -2,18 +2,21 @@
   "name": "@henskelis/bundled-package",
   "version": "0.0.0",
   "description": "Easy integration of HC forms in a web page",
+  "author": "Henskelis",
+  "keywords": ["form", "integration", "web", "component", "web component"],
+  "license": "ISC",
   "type": "module",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "ts-check": "tsc --emitDeclarationOnly false --noEmit"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "tslib": "catalog:",
     "typescript": "catalog:"
   },
-  "author": "Henskelis",
-  "keywords": ["form", "integration", "web", "component", "web component"],
-  "license": "ISC",
   "packageManager": "pnpm@9.6.0",
   "engines": {
     "node": ">=20.15.1",

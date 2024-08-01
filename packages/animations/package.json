@@ -28,6 +28,9 @@
     }
   },
   "files": ["dist"],
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "@commander-js/extra-typings": "catalog:",
     "commander": "catalog:",

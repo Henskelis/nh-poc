@@ -1,31 +1,14 @@
-name: CI
+name: Integration
 
 on:
-  pull_request:
   push:
+    branches:
+      - next
+  pull_request:
+    branches:
+      - next
 
 jobs:
   code-quality:
-    name: Code Quality
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node: [20]
-    steps:
-      - name: Checkout the repository
-        uses: actions/checkout@v4
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-      - name: Setup node ${{ matrix.node }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node }}
-          cache: pnpm
-      - name: Install dependencies
-        run: pnpm install
-      - name: Check for TypeScript errors
-        run: pnpm ts-check
-      - name: Check for formatting and linting errors
-        run: pnpm biome ci .
-      - name: Check for spelling mistakes
-        run: pnpm spell-check
+    name: "[CI] Code Quality"
+    uses: ./.github/workflows/code-quality.yaml

@@ -1,0 +1,39 @@
+name: Release
+
+on:
+  workflow_call:
+
+permissions: {}
+
+jobs:
+  release:
+    # Prevent the action from running on forks
+    if: github.repository == 'Henskelis/nh-poc'
+    permissions:
+      contents: write
+      pull-requests: write
+    name: Release
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [20]
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v4
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+      - name: Setup node ${{ matrix.node }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: pnpm
+      - name: Install dependencies
+        run: pnpm install
+      - name: Manage release PR and publish packages
+        uses: "changesets/action@v1"
+        with:
+          commit: version packages
+          publish: pnpm build && pnpm changeset publish
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
