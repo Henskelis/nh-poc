@@ -10,6 +10,7 @@ jobs:
     name: "[CD] Code Quality"
     uses: ./.github/workflows/code-quality.yaml
   release:
+    needs: code-quality
     name: "[CD] Release"
     permissions:
       contents: write
