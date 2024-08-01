@@ -2,18 +2,37 @@
   "name": "@henskelis/exports-package",
   "version": "0.0.0",
   "description": "Collection of animations ready to be used with the Web Animations API",
-  "type": "module",
-  "scripts": {
-    "preinstall": "npx only-allow pnpm",
-    "ts-check": "tsc --emitDeclarationOnly false --noEmit"
-  },
-  "devDependencies": {
-    "tslib": "catalog:",
-    "typescript": "catalog:"
-  },
   "author": "Henskelis",
   "keywords": ["animations", "web", "web animations api"],
   "license": "ISC",
+  "type": "module",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "start": "pnpm clean && concurrently \"pnpm build:dev:ts\" \"pnpm build:dev:src\"",
+    "build:dev:ts": "tsc-watch --noClear",
+    "build:dev:src": "./scripts/build.js --watch",
+    "build": "pnpm clean && tsc && ./scripts/build.js",
+    "clean": "rm -rf dist *.tsbuildinfo",
+    "ts-check": "tsc --emitDeclarationOnly false --noEmit"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "default": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist"],
+  "devDependencies": {
+    "@commander-js/extra-typings": "catalog:",
+    "commander": "catalog:",
+    "concurrently": "catalog:",
+    "esbuild": "catalog:",
+    "tsc-watch": "catalog:",
+    "tslib": "catalog:",
+    "typescript": "catalog:"
+  },
   "packageManager": "pnpm@9.6.0",
   "engines": {
     "node": ">=20.15.1",

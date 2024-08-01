@@ -6,6 +6,8 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "prepare": "lefthook install",
+    "start": "turbo run start",
+    "build": "turbo run build",
     "ts-check": "turbo run ts-check",
     "format": "biome check --write --linter-enabled=false --no-errors-on-unmatched",
     "lint": "biome lint --fix --no-errors-on-unmatched",
@@ -16,7 +18,7 @@
     "@changesets/cli": "^2.27.7",
     "cspell": "^8.13.0",
     "lefthook": "^1.7.11",
-    "turbo": "^2.0.10",
+    "turbo": "^2.0.11",
     "typescript": "catalog:"
   },
   "license": "ISC",
