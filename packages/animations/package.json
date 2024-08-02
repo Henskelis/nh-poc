@@ -13,6 +13,7 @@
     "build:dev:src": "./scripts/build.js --watch",
     "build": "pnpm clean && tsc && ./scripts/build.js",
     "clean": "rm -rf dist *.tsbuildinfo",
+    "release": "pnpm build && pnpm changeset publish",
     "ts-check": "tsc --emitDeclarationOnly false --noEmit"
   },
   "main": "./dist/index.js",
