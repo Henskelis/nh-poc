@@ -22,5 +22,7 @@ jobs:
           cache: pnpm
       - name: Install dependencies
         run: pnpm install
+      - name: Disable telemetry of Turborepo
+        run: pnpm turbo telemetry disable
       - name: Build packages and docs
         run: pnpm build
