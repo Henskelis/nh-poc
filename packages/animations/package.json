@@ -1,6 +1,6 @@
 {
   "name": "@henskelis/exports-package",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Collection of animations ready to be used with the Web Animations API",
   "author": "Henskelis",
   "keywords": ["animations", "web", "web animations api"],
