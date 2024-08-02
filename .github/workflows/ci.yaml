@@ -10,9 +10,24 @@ on:
       - next
 
 jobs:
+  pre_job:
+    name: Check if run needed
+    runs-on: ubuntu-latest
+    outputs:
+      should_skip: ${{ steps.skip_check.outputs.should_skip }}
+    steps:
+      - id: skip_check
+        name: Search for duplicate successful run
+        uses: fkirc/skip-duplicate-actions@v5
+        with:
+          skip_after_successful_duplicate: 'true'
   code-quality:
-    name: "[CI] Code Quality"
+    needs: pre_job
+    if: needs.pre_job.outputs.should_skip != 'true'
+    name: "[QA] Codebase"
     uses: ./.github/workflows/code-quality.yaml
   build:
-    name: "[CI] Build packages"
+    needs: pre_job
+    if: needs.pre_job.outputs.should_skip != 'true'
+    name: "[QA] Build"
     uses: ./.github/workflows/build.yaml
