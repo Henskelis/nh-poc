@@ -12,18 +12,15 @@ jobs:
       pull-requests: write
     name: Release packages
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node: [20]
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v4
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
-      - name: Setup node ${{ matrix.node }}
+      - name: Setup node 20
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node }}
+          node-version: 20
           cache: pnpm
       - name: Install dependencies
         run: pnpm install

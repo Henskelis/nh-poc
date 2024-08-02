@@ -1,6 +1,7 @@
 {
   "name": "@henskelis/bundled-package",
   "version": "0.0.0",
+  "private": true,
   "description": "Easy integration of HC forms in a web page",
   "author": "Henskelis",
   "keywords": ["form", "integration", "web", "component", "web component"],
