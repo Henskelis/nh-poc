@@ -10,6 +10,7 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
+    name: Release packages
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -26,9 +27,10 @@ jobs:
           cache: pnpm
       - name: Install dependencies
         run: pnpm install
-      - name: Manage release PR and publish packages
+      - name: Version and publish packages
         uses: "changesets/action@v1"
         with:
+          title: Version packages
           commit: version packages
           publish: pnpm build && pnpm changeset publish
         env:
