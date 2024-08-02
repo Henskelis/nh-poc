@@ -26,13 +26,6 @@ jobs:
         run: pnpm install
       - name: Disable telemetry of Turborepo
         run: pnpm turbo telemetry disable
-      - name: Create npm authentication file
-        run: |
-          cat << EOF > "$HOME/.npmrc"
-            //registry.npmjs.org/:_authToken=$NPM_TOKEN
-          EOF
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Version and publish packages
         uses: changesets/action@v1
         with:
