@@ -27,8 +27,8 @@ jobs:
           cache: pnpm
       - name: Install dependencies
         run: pnpm install
-      - name: Build packages and docs
-        run: pnpm build
+      - name: Disable telemetry of Turborepo
+        run: pnpm turbo telemetry disable
       - name: Version and publish packages
         uses: "changesets/action@v1"
         with:

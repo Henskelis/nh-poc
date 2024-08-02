@@ -22,6 +22,8 @@ jobs:
           cache: pnpm
       - name: Install dependencies
         run: pnpm install
+      - name: Disable telemetry of Turborepo
+        run: pnpm turbo telemetry disable
       - name: Check for TypeScript errors
         run: pnpm ts-check
       - name: Check for formatting and linting errors
