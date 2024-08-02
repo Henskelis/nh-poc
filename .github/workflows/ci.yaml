@@ -25,10 +25,10 @@ jobs:
   code-quality:
     needs: pre_job
     if: needs.pre_job.outputs.should_skip != 'true'
-    name: "[QA] Codebase"
+    name: '[QA] Codebase'
     uses: ./.github/workflows/code-quality.yaml
   build:
     needs: pre_job
     if: needs.pre_job.outputs.should_skip != 'true'
-    name: "[QA] Build"
+    name: '[QA] Build'
     uses: ./.github/workflows/build.yaml
