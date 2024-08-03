@@ -25,6 +25,10 @@
     "./easing-functions": {
       "default": "./dist/easing-functions.js",
       "types": "./dist/easing-functions.d.ts"
+    },
+    "./*": {
+      "default": "./dist/keyframes/*.js",
+      "types": "./dist/keyframes/*.d.ts"
     }
   },
   "files": ["dist"],
