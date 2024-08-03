@@ -12,3 +12,6 @@ jobs:
       contents: write
       pull-requests: write
     uses: ./.github/workflows/release.yaml
+    with:
+      node-version: '20'
+    secrets: inherit
