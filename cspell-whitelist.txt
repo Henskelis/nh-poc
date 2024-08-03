@@ -1,6 +1,7 @@
 biomejs
 esbuild
 henskelis
+keyframes
 lefthook
 nodenext
 preinstall
